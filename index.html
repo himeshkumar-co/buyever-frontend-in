@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BuyEver – Online Mart</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="logo">Buy<span>Ever</span></div>
+
+  <input 
+    type="text" 
+    id="searchInput" 
+    placeholder="Search essentials, groceries, electronics..."
+    onkeyup="searchProduct()"
+  >
+
+  <div class="header-btns">
+    <a href="cart.html">🛒 Cart</a>
+    <a href="#">👤 Login</a>
+  </div>
+</header>
+
+<!-- BANNER -->
+<section class="banner">
+  <h1>India’s Smart Online Store</h1>
+  <p>Groceries • Electronics • Fashion • Baby Care</p>
+</section>
+<!-- CATEGORY -->
+<h2 class="title">Shop by Category</h2>
+
+<div class="grid colorful">
+  <div onclick="openCategory('baby')">👶 Baby Care</div>
+  <div onclick="openCategory('fruits')">🍎 Fruits & Veggies</div>
+  <div onclick="openCategory('electronics')">📱 Electronics</div>
+  <div onclick="openCategory('fashion')">👕 Fashion</div>
+  <div onclick="openCategory('home')">🏠 Home & Kitchen</div>
+  <div onclick="openCategory('beauty')">💄 Beauty Care</div>
+</div>
+<!-- ===== OFFER SLIDER ===== -->
+<section class="slider">
+  <img id="slideImg" src="images/slider/slide1.jpg">
+</section>
+
+<!-- ===== UNDER 100 ===== -->
+<h2 class="title">🔥 Top Deals Under ₹100</h2>
+<div class="products">
+  <div class="card"><img src="images/fruits/banana.jpg"><h4>Banana</h4><p>₹40</p></div>
+  <div class="card"><img src="images/fruits/apple.jpg"><h4>Apple</h4><p>₹80</p></div>
+  <div class="card"><img src="images/beauty/facewash.jpg"><h4>Face Wash</h4><p>₹99</p></div>
+
+  <div class="card"><img src="images/fruits/mango.jpg"><h4>Mango</h4><p>₹90</p></div>
+  <div class="card"><img src="images/beauty/shampoo.jpg"><h4>Mini Shampoo</h4><p>₹75</p></div>
+  <div class="card"><img src="images/baby/wipes.jpg"><h4>Baby Wipes</h4><p>₹60</p></div>
+</div>
+
+
+<!-- ===== TOP DISCOUNTS ===== -->
+<h2 class="title">💥 Top Discount Products</h2>
+<div class="products">
+  <div class="card"><img src="images/electronics/mobile.jpg"><h4>Smartphone</h4><p>₹14,999</p></div>
+  <div class="card"><img src="images/fashion/tshirt.jpg"><h4>T-Shirt</h4><p>₹399</p></div>
+  <div class="card"><img src="images/home/cooker.jpg"><h4>Cooker</h4><p>₹1,899</p></div>
+
+  <div class="card"><img src="images/fashion/jeans.jpg"><h4>Jeans</h4><p>₹999</p></div>
+  <div class="card"><img src="images/electronics/laptop.jpg"><h4>Laptop</h4><p>₹44,999</p></div>
+  <div class="card"><img src="images/home/bedsheet.jpg"><h4>Bedsheet</h4><p>₹699</p></div>
+</div>
+
+
+<!-- ===== NEW PRODUCTS SLIDER ===== -->
+<h2 class="title">🆕 New Arrivals</h2>
+<div class="new-slider">
+  <div class="new-track">
+    <img src="images/fashion/jeans.jpg">
+    <img src="images/electronics/laptop.jpg">
+    <img src="images/beauty/shampoo.jpg">
+    <img src="images/home/bedsheet.jpg">
+    <img src="images/baby/diapers.jpg">
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-box">
+    <h3>Contact Us</h3>
+    <p>Email: support@buyever.com</p>
+    <p>Phone: +91 98765 43210</p>
+    <p>Address: India</p>
+  </div>
+
+  <div class="footer-box">
+    <h3>Help</h3>
+    <p>Payments</p>
+    <p>Shipping</p>
+    <p>Returns</p>
+  </div>
+
+  <div class="footer-box">
+    <h3>Policy</h3>
+    <p>Privacy</p>
+    <p>Terms</p>
+    <p>Security</p>
+  </div>
+</footer>
+
+<script src="js/slider.js"></script>
+
+
+
+
+<script src="js/main.js"></script>
+</body>
+</html>

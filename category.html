@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Products</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2 id="cat-title"></h2>
+<a href="cart.html" class="cart-btn">Go to Cart</a>
+
+<div id="product-list"></div>
+
+<script src="js/data.js"></script>
+<script>
+let cat = localStorage.getItem("category");
+products[cat].forEach(p=>{
+  document.getElementById("product-list").innerHTML += `
+    <div>
+      <img src="${p.img}" width="150">
+      <h4>${p.name}</h4>
+      <p>₹${p.price}</p>
+      <button onclick="add(${p.id})">Add to Cart</button>
+    </div>`;
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+const products = {
+
+  baby: [
+    {id:1,name:"Diapers",price:499,img:"images/baby/diapers.jpg"},
+    {id:2,name:"Baby Wipes",price:199,img:"images/baby/wipes.jpg"},
+    {id:3,name:"Baby Shampoo",price:249,img:"images/baby/shampoo.jpg"},
+    {id:4,name:"Baby Lotion",price:299,img:"images/baby/lotion.jpg"},
+    {id:5,name:"Baby Powder",price:149,img:"images/baby/powder.jpg"},
+    {id:6,name:"Baby Oil",price:199,img:"images/baby/oil.jpg"},
+    {id:7,name:"Baby Soap",price:99,img:"images/baby/soap.jpg"},
+    {id:8,name:"Rash Cream",price:179,img:"images/baby/rash.jpg"},
+    {id:9,name:"Baby Food",price:399,img:"images/baby/food.jpg"},
+    {id:10,name:"Formula Milk",price:499,img:"images/baby/formula.jpg"},
+    {id:11,name:"Feeding Bottle",price:299,img:"images/baby/bottle.jpg"},
+    {id:12,name:"Pacifier",price:199,img:"images/baby/pacifier.jpg"},
+    {id:13,name:"Baby Bedding",price:799,img:"images/baby/bedding.jpg"},
+    {id:14,name:"Baby Clothing",price:599,img:"images/baby/clothes.jpg"},
+    {id:15,name:"Bibs",price:149,img:"images/baby/bibs.jpg"},
+    {id:16,name:"Baby Tub",price:899,img:"images/baby/tub.jpg"},
+    {id:17,name:"Teether",price:199,img:"images/baby/teether.jpg"},
+    {id:18,name:"Stroller",price:5999,img:"images/baby/stroller.jpg"},
+    {id:19,name:"Walker",price:2999,img:"images/baby/walker.jpg"},
+    {id:20,name:"Car Seat",price:7499,img:"images/baby/carseat.jpg"},
+    {id:21,name:"High Chair",price:3999,img:"images/baby/chair.jpg"},
+    {id:22,name:"Baby Toys",price:499,img:"images/baby/toys.jpg"},
+    {id:23,name:"Potty Seat",price:899,img:"images/baby/potty.jpg"},
+    {id:24,name:"Baby Sunscreen",price:349,img:"images/baby/sunscreen.jpg"},
+    {id:25,name:"Grooming Kit",price:299,img:"images/baby/groom.jpg"}
+  ],
+
+  fruits: [
+    {id:101,name:"Apple",price:120,img:"images/fruits/apple.jpg"},
+    {id:102,name:"Banana",price:40,img:"images/fruits/banana.jpg"},
+    {id:103,name:"Mango",price:150,img:"images/fruits/mango.jpg"},
+    {id:104,name:"Orange",price:80,img:"images/fruits/orange.jpg"},
+    {id:105,name:"Grapes",price:90,img:"images/fruits/grapes.jpg"},
+    {id:106,name:"Pomegranate",price:160,img:"images/fruits/pomegranate.jpg"},
+    {id:107,name:"Papaya",price:60,img:"images/fruits/papaya.jpg"},
+    {id:108,name:"Watermelon",price:50,img:"images/fruits/watermelon.jpg"},
+    {id:109,name:"Muskmelon",price:70,img:"images/fruits/muskmelon.jpg"},
+    {id:110,name:"Pineapple",price:90,img:"images/fruits/pineapple.jpg"},
+    {id:111,name:"Kiwi",price:120,img:"images/fruits/kiwi.jpg"},
+    {id:112,name:"Guava",price:70,img:"images/fruits/guava.jpg"},
+    {id:113,name:"Pear",price:100,img:"images/fruits/pear.jpg"},
+    {id:114,name:"Dragon Fruit",price:180,img:"images/fruits/dragon.jpg"},
+    {id:115,name:"Sweet Lime",price:90,img:"images/fruits/lime.jpg"},
+    {id:116,name:"Potato",price:30,img:"images/fruits/potato.jpg"},
+    {id:117,name:"Onion",price:35,img:"images/fruits/onion.jpg"},
+    {id:118,name:"Tomato",price:40,img:"images/fruits/tomato.jpg"},
+    {id:119,name:"Cauliflower",price:60,img:"images/fruits/cauliflower.jpg"},
+    {id:120,name:"Cabbage",price:50,img:"images/fruits/cabbage.jpg"},
+    {id:121,name:"Brinjal",price:45,img:"images/fruits/brinjal.jpg"},
+    {id:122,name:"Lady Finger",price:55,img:"images/fruits/okra.jpg"},
+    {id:123,name:"Bottle Gourd",price:40,img:"images/fruits/bottle.jpg"},
+    {id:124,name:"Capsicum",price:70,img:"images/fruits/capsicum.jpg"},
+    {id:125,name:"Carrot",price:60,img:"images/fruits/carrot.jpg"}
+  ]
+
+  // 👆 isi pattern pe Electronics, Fashion, Home, Beauty add karna hai
+};
