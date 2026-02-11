@@ -1,133 +1,191 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>BuyEver – Online Mart</title>
-
-  <!-- 🔥 VERY IMPORTANT FOR MOBILE -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>BuyEver – Hyperlocal Marketplace</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-  <!-- SPLASH SCREEN -->
-<div id="splash">
-  <img src="images/logo.png" alt="BuyEver Logo">
-</div>
 
-<!-- MAIN WEBSITE -->
-<div id="mainContent" style="display:none;">
-
-
-<!-- HEADER -->
-<header class="header">
+<!-- ================= HEADER ================= -->
+<header class="topbar">
   <div class="logo">Buy<span>Ever</span></div>
 
-  <input 
-    type="text" 
-    id="searchInput" 
-    placeholder="Search essentials, groceries, electronics..."
-    onkeyup="searchProduct()"
-  >
+  <select class="pincode">
+    <option>Deliver to 400001</option>
+    <option>Deliver to 110001</option>
+    <option>Deliver to 700001</option>
+  </select>
 
-  <div class="header-btns">
-    <a href="cart.html">🛒 Cart</a>
-    <a href="#">👤 Login</a>
+  <input class="search" type="text" placeholder="Search products, brands & categories">
+
+  <div class="icons">
+    <span title="Profile">👤</span>
+    <span title="Cart">🛒 <b id="cartCount">0</b></span>
   </div>
 </header>
 
-<!-- BANNER -->
-<section class="banner">
-  <h1>India’s Smart Online Store</h1>
-  <p>Groceries • Electronics • Fashion • Baby Care</p>
-</section>
-<!-- CATEGORY -->
-<h2 class="title">Shop by Category</h2>
-
-<div class="grid colorful">
-  <div onclick="openCategory('baby')">👶 Baby Care</div>
-  <div onclick="openCategory('fruits')">🍎 Fruits & Veggies</div>
-  <div onclick="openCategory('electronics')">📱 Electronics</div>
-  <div onclick="openCategory('fashion')">👕 Fashion</div>
-  <div onclick="openCategory('home')">🏠 Home & Kitchen</div>
-  <div onclick="openCategory('beauty')">💄 Beauty Care</div>
-</div>
-<!-- ===== OFFER SLIDER ===== -->
-<section class="slider">
-  <img id="slideImg" src="images/slider/slide1.jpg">
-</section>
-
-<!-- ===== UNDER 100 ===== -->
-<h2 class="title">🔥 Top Deals Under ₹100</h2>
-<div class="products">
-  <div class="card"><img src="images/fruits/banana.jpg"><h4>Banana</h4><p>₹40</p></div>
-  <div class="card"><img src="images/fruits/apple.jpg"><h4>Apple</h4><p>₹80</p></div>
-  <div class="card"><img src="images/beauty/facewash.jpg"><h4>Face Wash</h4><p>₹99</p></div>
-
-  <div class="card"><img src="images/fruits/mango.jpg"><h4>Mango</h4><p>₹90</p></div>
-  <div class="card"><img src="images/beauty/shampoo.jpg"><h4>Mini Shampoo</h4><p>₹75</p></div>
-  <div class="card"><img src="images/baby/wipes.jpg"><h4>Baby Wipes</h4><p>₹60</p></div>
-</div>
-
-
-<!-- ===== TOP DISCOUNTS ===== -->
-<h2 class="title">💥 Top Discount Products</h2>
-<div class="products">
-  <div class="card"><img src="images/electronics/mobile.jpg"><h4>Smartphone</h4><p>₹14,999</p></div>
-  <div class="card"><img src="images/fashion/tshirt.jpg"><h4>T-Shirt</h4><p>₹399</p></div>
-  <div class="card"><img src="images/home/cooker.jpg"><h4>Cooker</h4><p>₹1,899</p></div>
-
-  <div class="card"><img src="images/fashion/jeans.jpg"><h4>Jeans</h4><p>₹999</p></div>
-  <div class="card"><img src="images/electronics/laptop.jpg"><h4>Laptop</h4><p>₹44,999</p></div>
-  <div class="card"><img src="images/home/bedsheet.jpg"><h4>Bedsheet</h4><p>₹699</p></div>
-</div>
-
-
-<!-- ===== NEW PRODUCTS SLIDER ===== -->
-<h2 class="title">🆕 New Arrivals</h2>
-<div class="new-slider">
-  <div class="new-track">
-    <img src="images/fashion/jeans.jpg">
-    <img src="images/electronics/laptop.jpg">
-    <img src="images/beauty/shampoo.jpg">
-    <img src="images/home/bedsheet.jpg">
-    <img src="images/baby/diapers.jpg">
+<!-- ================= OFFER STRIP ================= -->
+<div class="offer-strip">
+  <div class="strip-track">
+    <span>🔥 Maha Dhamaka Sale</span>
+    <span>🎁 Extra ₹50 Cashback</span>
+    <span>💳 Bank & UPI Discounts</span>
+    <span>🚚 Free Delivery Above ₹199</span>
   </div>
 </div>
 
-<!-- ===== FOOTER ===== -->
+<!-- ================= HERO / BIG BACHAT ================= -->
+<section class="big-banner">
+  <h1 class="glow">BIG BACHAT DAYS</h1>
+
+  <div class="banner-grid">
+    <div class="banner-card">
+      <img src="images/atta.png">
+      <p>Up to 40% OFF</p>
+      <small>Atta, Tel & Cheeni</small>
+    </div>
+
+    <div class="banner-card">
+      <img src="images/dal.png">
+      <p>Up to 50% OFF</p>
+      <small>Dal, Chawal & Masale</small>
+    </div>
+
+    <div class="banner-card">
+      <img src="images/dryfruits.png">
+      <p>Up to 50% OFF</p>
+      <small>Dry Fruits & Sweets</small>
+    </div>
+
+    <div class="banner-card highlight pulse">
+      <img src="images/grocery.png">
+      <p>Up to 80% OFF</p>
+      <small>Grocery & Snacks</small>
+    </div>
+
+    <div class="banner-card">
+      <img src="images/homecare.png">
+      <p>Up to 60% OFF</p>
+      <small>Home Care</small>
+    </div>
+
+    <div class="banner-card">
+      <img src="images/personal.png">
+      <p>Up to 60% OFF</p>
+      <small>Personal Care</small>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= CATEGORY ================= -->
+<h3 class="section-title">Shop by Category</h3>
+
+<div class="category-scroll big">
+  <div onclick="openCategory('women')"><img src="images/women.png"><span>Women</span></div>
+  <div onclick="openCategory('footwear')"><img src="images/footwear.png"><span>Footwear</span></div>
+  <div onclick="openCategory('kids')"><img src="images/kids.png"><span>Kids</span></div>
+  <div onclick="openCategory('new')"><img src="images/new.png"><span>New Arrival</span></div>
+  <div onclick="openCategory('western')"><img src="images/western.png"><span>Western</span></div>
+  <div onclick="openCategory('wedding')"><img src="images/wedding.png"><span>Wedding</span></div>
+  <div onclick="openCategory('accessories')"><img src="images/accessories.png"><span>Accessories</span></div>
+  <div onclick="openCategory('saree')"><img src="images/saree.png"><span>Saree</span></div>
+  <div onclick="openCategory('heels')"><img src="images/heels.png"><span>Heels</span></div>
+  <div onclick="openCategory('puja')"><img src="images/puja.png"><span>Puja</span></div>
+  <div onclick="openCategory('ration')"><img src="images/ration.png"><span>Ration</span></div>
+  <div onclick="openCategory('bags')"><img src="images/bags.png"><span>Bags</span></div>
+  <div onclick="openCategory('jewellery')"><img src="images/jewellery.png"><span>Jewellery</span></div>
+  <div onclick="openCategory('watch')"><img src="images/watch.png"><span>Watches</span></div>
+  <div onclick="openCategory('makeup')"><img src="images/makeup.png"><span>Makeup</span></div>
+</div>
+
+<div class="category-scroll big">
+  <div onclick="openCategory('kitchen')"><img src="images/kitchen.png"><span>Kitchen</span></div>
+  <div onclick="openCategory('electronics')"><img src="images/electronics.png"><span>Electronics</span></div>
+  <div onclick="openCategory('home')"><img src="images/home.png"><span>Home</span></div>
+  <div onclick="openCategory('books')"><img src="images/books.png"><span>Books</span></div>
+  <div onclick="openCategory('wellness')"><img src="images/wellness.png"><span>Wellness</span></div>
+  <div onclick="openCategory('cleaning')"><img src="images/cleaning.png"><span>Cleaning</span></div>
+  <div onclick="openCategory('decor')"><img src="images/decor.png"><span>Decor</span></div>
+  <div onclick="openCategory('beauty')"><img src="images/beauty.png"><span>Beauty</span></div>
+  <div onclick="openCategory('stationery')"><img src="images/stationery.png"><span>Stationery</span></div>
+  <div onclick="openCategory('toys')"><img src="images/toys.png"><span>Toys</span></div>
+  <div onclick="openCategory('pet')"><img src="images/pet.png"><span>Pet Care</span></div>
+  <div onclick="openCategory('fitness')"><img src="images/fitness.png"><span>Fitness</span></div>
+  <div onclick="openCategory('astrology')"><img src="images/astrology.png"><span>Astrology</span></div>
+  <div onclick="openCategory('grocery')"><img src="images/grocery.png"><span>Grocery</span></div>
+  <div onclick="openCategory('snacks')"><img src="images/snacks.png"><span>Snacks</span></div>
+</div>
+
+<!-- ================= FULL WIDTH ADS SLIDER ================= -->
+<div class="ads-slider">
+  <div class="ads-slide active">
+    <img src="images/ads/ad1.jpg" alt="Ad 1">
+  </div>
+  <div class="ads-slide">
+    <img src="images/ads/ad2.jpg" alt="Ad 2">
+  </div>
+  <div class="ads-slide">
+    <img src="images/ads/ad3.jpg" alt="Ad 3">
+  </div>
+  <div class="ads-slide">
+    <img src="images/ads/ad4.jpg" alt="Ad 4">
+  </div>
+</div>
+
+
+<!-- ================= DEALS ================= -->
+<section class="deal-section">
+<h3>🔥 Today’s Deals</h3>
+
+<div class="deal-row">
+  <div class="deal-card">
+    <img src="images/deal1.png">
+    <span class="badge">60% OFF</span>
+    <p>Card Discount</p>
+  </div>
+
+  <div class="deal-card">
+    <img src="images/deal2.png">
+    <span class="badge red">Edit Deal</span>
+    <p>Limited Time</p>
+  </div>
+</div>
+<a class="view-btn">View All Deals →</a>
+</section>
+
+<!-- ================= PRODUCT SECTIONS ================= -->
+<section class="product-section">
+  <h3>Food & Beverages</h3>
+  <div class="product-grid">
+    <img src="images/f1.png"><img src="images/f2.png"><img src="images/f3.png">
+    <img src="images/f4.png"><img src="images/f5.png"><img src="images/f6.png">
+  </div>
+</section>
+
+<section class="product-section">
+  <h3>Home & Personal Care</h3>
+  <div class="product-grid">
+    <img src="images/h1.png"><img src="images/h2.png"><img src="images/h3.png">
+    <img src="images/h4.png"><img src="images/h5.png"><img src="images/h6.png">
+  </div>
+</section>
+
+<section class="product-section festival">
+  <h3>🎨 Holi Special</h3>
+  <div class="product-grid">
+    <img src="images/holi1.png"><img src="images/holi2.png"><img src="images/holi3.png">
+    <img src="images/holi4.png"><img src="images/holi5.png"><img src="images/holi6.png">
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
-  <div class="footer-box">
-    <h3>Contact Us</h3>
-    <p>Email: support@buyever.com</p>
-    <p>Phone: +91 98765 43210</p>
-    <p>Address: India</p>
-  </div>
-
-  <div class="footer-box">
-    <h3>Help</h3>
-    <p>Payments</p>
-    <p>Shipping</p>
-    <p>Returns</p>
-  </div>
-
-  <div class="footer-box">
-    <h3>Policy</h3>
-    <p>Privacy</p>
-    <p>Terms</p>
-    <p>Security</p>
-  </div>
+© 2026 BuyEver | BCA Final Project
 </footer>
 
-<script src="js/slider.js"></script>
-
-
-
-
 <script src="js/main.js"></script>
-</div>
-
-<script src="js/splash.js"></script>
-
 </body>
 </html>

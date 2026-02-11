@@ -1,13 +1,27 @@
-let slides = [
-  "images/slider/slide1.jpg",
-  "images/slider/slide2.jpg",
-  "images/slider/slide3.jpg",
-  "images/slider/slide4.jpg",
-  "images/slider/slide5.jpg"
-];
+// js/slider.js
 
-let i = 0;
-setInterval(()=>{
-  document.getElementById("slideImg").src = slides[i];
-  i = (i + 1) % slides.length;
-},3000);
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function showSlide(i) {
+  slides.forEach(slide => slide.classList.remove("active"));
+  slides[i].classList.add("active");
+}
+
+function autoSlide() {
+  index++;
+  if (index >= slides.length) index = 0;
+  showSlide(index);
+}
+
+setInterval(autoSlide, 3000);
+/* ================= CATEGORY SLIDER AUTO SCROLL ================= */
+/* ================= ADS SLIDER ================= */
+const ads = document.querySelectorAll(".ads-slide");
+let currentAd = 0;
+
+setInterval(() => {
+  ads[currentAd].classList.remove("active");
+  currentAd = (currentAd + 1) % ads.length;
+  ads[currentAd].classList.add("active");
+}, 3000); // 3 sec
