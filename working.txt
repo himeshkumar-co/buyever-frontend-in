@@ -1,0 +1,11 @@
+This is admin Url (login page)
+http://127.0.0.1:5500/admin/login.html
+
+
+This is Frontend Url 
+http://127.0.0.1:5500/dashboard.html
+
+This is direct access Admin panel
+
+username:-admin
+password:-admin@gmail.com

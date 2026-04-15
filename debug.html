@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Buy Ever - Debug</title>
+    <script src="js/jquery-1.11.0.min.js"></script>
+</head>
+
+<body>
+    <h1>Debug Page</h1>
+    <button onclick="testAPI()">Test API</button>
+    <div id="results"></div>
+
+    <script>
+        async function testAPI() {
+            const results = document.getElementById('results');
+            results.innerHTML = '<p>Testing...</p>';
+
+            try {
+                // Test categories
+                const catResponse = await fetch('http://localhost:5000/api/categories');
+                const categories = await catResponse.json();
+                console.log('Categories:', categories);
+
+                // Test products
+                const prodResponse = await fetch('http://localhost:5000/api/products');
+                const products = await prodResponse.json();
+                console.log('Products:', products);
+
+                results.innerHTML = `
+                    <h2>Categories (${categories.length}):</h2>
+                    <pre>${JSON.stringify(categories, null, 2)}</pre>
+                    <h2>Products (${products.length}):</h2>
+                    <pre>${JSON.stringify(products, null, 2)}</pre>
+                `;
+            } catch (error) {
+                results.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+                console.error('Error:', error);
+            }
+        }
+
+        // Auto-run on load
+        window.onload = testAPI;
+    </script>
+</body>
+
+</html>
